@@ -1,0 +1,30 @@
+<%- include("partials/header") %>
+
+<div id="main-container">
+
+	<!-- Masonry Grid -->
+	<section class="listing">
+		<div class="listing-grid">
+			<div id="grid-sizer">
+			</div>
+			<% images.forEach((item) => { %>
+				<div class="grid-item">
+					<a class="preview" href="#imageModal" data-toggle="modal">
+						<div class="card text-white">
+							<img src="<%= item.image %>">
+							<div class="card-img-overlay">
+								<i class="fas fa-plus"></i>
+								<div class="card-img-overlay overlay-background">
+									<i class="fas fa-plus"></i>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			<% }) %>
+		</div>
+	</section>
+
+</div>
+
+<%- include("partials/footer") %>
